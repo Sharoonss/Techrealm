@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Input</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #loading {
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#submitBtn').click(function () {
+                var inputData = $('#inputField').val();
+                $('#submitBtn').hide();
+                $('#loading').show();
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://5000-gitpodio-apacheexample-0i4dy2ydxl5.ws-us110.gitpod.io/process', // Change this to your server URL
+                    contentType: 'application/json',
+                    data: JSON.stringify({ input: inputData }),
+                    success: function (data) {
+                        $('#result').html('<a href="' + data.url + '">' + data.url + '</a>');
+                    },
+                    error: function (xhr, status, error) {
+                        $('#result').html('Error: ' + xhr.responseJSON.error);
+                    },
+                    complete: function () {
+                        $('#loading').hide();
+                        $('#submitBtn').show();
+                    }
+                });
+
+                // Periodically check for status updates
+                var interval = setInterval(function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'https://5000-gitpodio-apacheexample-0i4dy2ydxl5.ws-us110.gitpod.io/status', // Endpoint to check status
+                        success: function (data) {
+                            $('#status').text(data.status + '% done');
+                        }
+                    });
+                }, 30000); // Check every 30 seconds
+
+                // Stop checking for updates after 2 minutes
+                setTimeout(function () {
+                    clearInterval(interval);
+                }, 120000); // Stop after 2 minutes
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Enter Input:</h2>
+    <input type="text" id="inputField" placeholder="Enter input...">
+    <button id="submitBtn">Submit</button>
+    <div id="loading">Loading...</div>
+    <div id="result"></div>
+    <div id="status"></div> <!-- Status updates will be displayed here -->
+</body>
+</html>

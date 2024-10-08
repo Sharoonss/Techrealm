@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom SVG Icon</title>
+    <style>
+        .bringer-icon-arrow-down {
+            display: inline-block;
+            width: 24px; /* Adjust size as needed */
+            height: 24px; /* Adjust size as needed */
+            background-color: black; /* The color of the mask */
+            -webkit-mask-image: url('/images/down-arrow-svgrepo-com.svg');
+            mask-image: url('/images/down-arrow-svgrepo-com.svg');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <span class="bringer-icon bringer-icon-arrow-down"></span>
+</body>
+</html>

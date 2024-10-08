@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Feed Titles</title>
+    <style>
+        article {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin: 16px 0;
+            background-color: #f9f9f9;
+        }
+        .article-item {
+            margin-bottom: 20px;
+        }
+        .article-item h2 {
+            margin: 0 0 10px;
+        }
+        .article-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Article Titles</h1>
+    <article>
+        <figure>
+            <div class="date-and-time">
+                <span>Aug</span>
+                <span>12</span>
+                <span>2023</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80" alt="" loading="lazy" />
+            <figcaption>
+                <span>Luxury Brands</span>
+                <span>By Admin | Luxury</span>
+            </figcaption>
+        </figure>
+    </article>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rssUrl = 'https://www.palestinechronicle.com/feed/';
+            const article = document.querySelector("article");
+
+            fetch(rssUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    const items = xmlDoc.getElementsByTagName("item");
+
+                    // Clear existing content in the article
+                    article.innerHTML = '';
+
+                    for (let i = 0; i < items.length; i++) {
+                        const title = items[i].getElementsByTagName("title")[0].textContent;
+                        const link = items[i].getElementsByTagName("link")[0].textContent;
+                        const pubDate = items[i].getElementsByTagName("pubDate")[0].textContent;
+                        const description = items[i].getElementsByTagName("description")[0].textContent;
+
+                        const articleItem = document.createElement("div");
+                        articleItem.classList.add("article-item");
+
+                        const titleElement = document.createElement("h2");
+                        const linkElement = document.createElement("a");
+                        linkElement.href = link;
+                        linkElement.textContent = title;
+                        titleElement.appendChild(linkElement);
+
+                        const dateElement = document.createElement("p");
+                        dateElement.textContent = `Published on: ${new Date(pubDate).toLocaleDateString()}`;
+
+                        const descriptionElement = document.createElement("p");
+                        descriptionElement.innerHTML = description;
+
+                        articleItem.appendChild(titleElement);
+                        articleItem.appendChild(dateElement);
+                        articleItem.appendChild(descriptionElement);
+
+                        article.appendChild(articleItem);
+                    }
+                })
+                .catch(error => console.error('Error fetching the RSS feed:', error));
+        });
+    </script>
+</body>
+</html>

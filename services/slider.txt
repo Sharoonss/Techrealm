@@ -1,0 +1,125 @@
+ <div class="bringer-slider-wrapper">
+                <!-- Slider -->
+                <div class="swiper bringer-slider" data-duration="800" data-effect="slide">
+                    <div class="swiper-wrapper">
+    
+                        <!-- Slider Item 01 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio01-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Branding</span>
+                                    <h4>Curology</h4>
+                                </div>
+                                <a href="portfolio-post01.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 02 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio02-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Advertising</span>
+                                    <h4>Cookie Dough</h4>
+                                </div>
+                                <a href="portfolio-post02.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 03 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio03-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Marketing</span>
+                                    <h4>Gaming Power</h4>
+                                </div>
+                                <a href="portfolio-post03.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 04 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio04-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Advertising</span>
+                                    <h4>Riot Energy</h4>
+                                </div>
+                                <a href="portfolio-post04.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 05 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio05-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Marketing</span>
+                                    <h4>Smoothie</h4>
+                                </div>
+                                <a href="portfolio-post05.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 06 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio06-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Branding</span>
+                                    <h4>Positive Beverage</h4>
+                                </div>
+                                <a href="portfolio-post06.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 07 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio07-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Branding</span>
+                                    <h4>Fashion Makeup</h4>
+                                </div>
+                                <a href="portfolio-post07.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 08 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio08-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Advertising</span>
+                                    <h4>Kombucha</h4>
+                                </div>
+                                <a href="portfolio-post08.html"></a>
+                            </div>
+                        </div>
+                                            
+                        <!-- Slider Item 09 -->
+                        <div class="swiper-slide">
+                            <img class="bringer-lazy" src="images/null.png" data-src="img/portfolio/portfolio09-land.jpg" alt="" width="1920" height="1280">
+                            <div class="bringer-slide-content">
+                                <div class="bringer-slide-content-inner bringer-slide-post-title">
+                                    <span class="bringer-meta">Marketing</span>
+                                    <h4>Alliance</h4>
+                                </div>
+                                <a href="portfolio-post09.html"></a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div><!-- .bringer-slider -->                
+                <!-- Slider Navigation -->
+                <div class="bringer-slider-nav on-sides">
+                    <a href="#" class="bringer-slider-prev">
+                        <span class="bringer-icon bringer-icon-arrow-left"></span>
+                    </a>
+                    <a href="#" class="bringer-slider-next">
+                        <span class="bringer-icon bringer-icon-arrow-right"></span>
+                    </a>
+                </div>
+            </div>

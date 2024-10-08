@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel Example</title>
+<!-- Add Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<!-- Add Slick Carousel theme CSS (optional) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<style>
+  /* Inline CSS for the specified section */
+  .stg-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stg-col-3 {
+    flex: 0 0 25%;
+  }
+  .stg-col-6 {
+    flex: 0 0 50%;
+  }
+  .bringer-parallax-media img {
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel {
+    max-width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="stg-row stg-bottom-gap stg-valign-middle stg-m-bottom-gap-l" data-unload="fade-left">
+  <div class="stg-col-3 stg-offset-3 stg-tp-col-6 stg-m-bottom-gap" data-appear="fade-right">
+    <div class="bringer-parallax-media">
+      <div class="carousel">
+        <div><img src="https://images.dog.ceo/breeds/chow/n02112137_7645.jpg" alt="Step 01" width="960" height="960"></div>
+        <div><img src="https://images.dog.ceo/breeds/chow/n02112137_7645.jpg" alt="Step 02" width="960" height="960"></div>
+        <div><img src="https://images.dog.ceo/breeds/chow/n02112137_7645.jpg" alt="Step 03" width="960" height="960"></div>
+        <div><img src="https://images.dog.ceo/breeds/chow/n02112137_7645.jpg" alt="Step 04" width="960" height="960"></div>
+        <div><img src="https://images.dog.ceo/breeds/chow/n02112137_7645.jpg" alt="Step 05" width="960" height="960"></div>
+      </div>
+    </div>
+  </div>
+  <div class="stg-col-6 stg-tp-col-6" data-appear="fade-right" data-delay="100">
+    <span class="bringer-label">Step 01</span>
+    <h4>Unleash Your Vision</h4>
+    <p><span class="bringer-highlight">Deep Dive Discovery:</span> We'll immerse ourselves in your world, exploring your unique story, target audience, and aspirations. This is where we uncover the heart of your brand and unearth the spark that sets you apart.</p>
+    <p><span class="bringer-highlight">Strategic Exploration:</span> We'll conduct thorough research, analyze your competitors, and identify opportunities to position your brand for success. This is where we map out the terrain and chart a course toward your goals.</p>
+  </div>
+</div>
+
+<!-- Add jQuery (required by Slick Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Add Slick Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  // Initialize the carousel after the document is ready
+  $(document).ready(function(){
+    $('.carousel').slick({
+      arrows: true, // Show arrows for navigation
+      infinite: false, // Remove infinite looping
+      dots: false, // Hide default dots
+      slidesToShow: 1, // Number of slides to show at once
+      slidesToScroll: 1 // Number of slides to scroll at a time
+    });
+
+    // Navigation buttons
+    $('.prev').click(function(){
+      $('.carousel').slick('slickPrev');
+    });
+    $('.next').click(function(){
+      $('.carousel').slick('slickNext');
+    });
+  });
+</script>
+</body>
+</html>
